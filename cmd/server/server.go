@@ -4,8 +4,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/ffigueiredo-sp/fullycle_go/services"
-	"github.com/ffigueiredo-sp/fullycle_go_grpc/pb/pb"
+	"github.com/ffigueiredo-sp/fullycle_go_grpc/pb"
+	"github.com/ffigueiredo-sp/fullycle_go_grpc/services"
 	"google.golang.org/grpc"
 )
 
@@ -17,7 +17,7 @@ func main() {
 	}
 
 	grpcServer := grpc.NewServer()
-	pb.RegisterUserServiceServer(grpcServer, services.NewUserServvice())
+	pb.RegisterUserServiceServer(grpcServer, services.NewUserService())
 
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("Could not serve: %v", err)

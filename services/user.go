@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ffigueiredo-sp/fullycle_go/pb/pb"
+	"github.com/ffigueiredo-sp/fullycle_go_grpc/pb"
 )
 
 // type UserServiceServer interface {
@@ -17,7 +17,7 @@ type UserService struct {
 }
 
 // Construtor
-func NewUserServvice() *UserService {
+func NewUserService() *UserService {
 	return &UserService{}
 }
 
