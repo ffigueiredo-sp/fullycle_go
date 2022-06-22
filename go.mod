@@ -1,4 +1,4 @@
-module github.com/ffigueiredo-sp/fullycle_go
+module github.com/ffigueiredo-sp/fullycle_go_grpc
 
 go 1.13
 
